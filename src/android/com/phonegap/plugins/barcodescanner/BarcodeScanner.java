@@ -137,6 +137,20 @@ public class BarcodeScanner extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
 
+
+                // Configure le zoom de la caméra
+                float zoomLevel = 10.0f; // Zoom x10
+                Camera camera = Camera.open();
+                Camera.Parameters parameters = camera.getParameters();
+                if (parameters.isZoomSupported()) {
+                    int maxZoom = parameters.getMaxZoom();
+                    int zoomValue = (int) (maxZoom / zoomLevel);
+                    parameters.setZoom(zoomValue);
+                    camera.setParameters(parameters);
+                }
+                camera.release();
+
+
                 Intent intentScan = new Intent(that.cordova.getActivity().getBaseContext(), CaptureActivity.class);
                 intentScan.setAction(Intents.Scan.ACTION);
                 intentScan.addCategory(Intent.CATEGORY_DEFAULT);
