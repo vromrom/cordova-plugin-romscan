@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
