@@ -7,19 +7,19 @@ Cross-platform BarcodeScanner for Cordova.
 
 This requires Cordova@10 and more
 
-    cordova plugin add @red-mobile/cordova-plugin-barcodescanner
+    cordova plugin add @vromrom/cordova-plugin-romscan
 
 Optional variables:
 This plugin requires the AndroidX legacy support library v4. Default value is `1.0.0`.  Check out the latest version [here](https://developer.android.com/jetpack/androidx/versions).
 
 ```
-% cordova plugin add @red-mobile/cordova-plugin-barcodescanner --variable ANDROIDX_LEGACY_SUPPORT_V4_VERSION="1.0.0"
+% cordova plugin add @vromrom/cordova-plugin-romscanr --variable ANDROIDX_LEGACY_SUPPORT_V4_VERSION="1.0.0"
 ```
 
 ### Uninstall
 
 ```
-% cordova plugin remove cordova-plugin-barcodescanner && npm uninstall @red-mobile/cordova-plugin-barcodescanner
+% cordova plugin remove cordova-plugin-barcodescanner && npm uninstall @vromrom/cordova-plugin-romscan
 ```
 
 ### Supported Platforms
