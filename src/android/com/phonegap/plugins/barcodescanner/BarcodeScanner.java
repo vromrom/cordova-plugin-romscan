@@ -59,7 +59,7 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String PHONE_TYPE = "PHONE_TYPE";
     private static final String SMS_TYPE = "SMS_TYPE";
 
-    private float zoomLevel = 1.0f; // Déclaration de zoomLevel comme variable de classe
+    private float zoomLevel = 10.0f; // Déclaration de zoomLevel comme variable de classe
 
     private static final String LOG_TAG = "BarcodeScanner";
 
@@ -141,7 +141,7 @@ public class BarcodeScanner extends CordovaPlugin {
 
                 
                 // Configure le zoom de la caméra
-                float zoomLevel = (float) args.optDouble(0, 1.0); // Default zoom level is 1.0
+                float zoomLevel = (float) args.optDouble(0, 10.0); // Default zoom level is 1.0
                 Log.d(LOG_TAG, "Zoom level: " + zoomLevel);
                 Camera camera = Camera.open();
                 Camera.Parameters parameters = camera.getParameters();
