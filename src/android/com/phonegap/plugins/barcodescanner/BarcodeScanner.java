@@ -134,7 +134,7 @@ public class BarcodeScanner extends CordovaPlugin {
      * Starts an intent to scan and decode a barcode.
      */
     public void scan(final JSONArray args) {
-
+        Log.d(LOG_TAG, "Run scan: ");
         final CordovaPlugin that = this;
 
         cordova.getThreadPool().execute(new Runnable() {
