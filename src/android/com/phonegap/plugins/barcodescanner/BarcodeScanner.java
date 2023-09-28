@@ -59,6 +59,8 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String PHONE_TYPE = "PHONE_TYPE";
     private static final String SMS_TYPE = "SMS_TYPE";
 
+    private float zoomLevel = 1.0f; // Déclaration de zoomLevel comme variable de classe
+
     private static final String LOG_TAG = "BarcodeScanner";
 
     private String [] permissions = { Manifest.permission.CAMERA };
