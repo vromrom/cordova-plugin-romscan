@@ -46,6 +46,7 @@ public class BarcodeScanner extends CordovaPlugin {
     private static final String TYPE = "type";
     private static final String PREFER_FRONTCAMERA = "preferFrontCamera";
     private static final String ORIENTATION = "orientation";
+    private static final String ZOOM = "zoom";
     private static final String SHOW_FLIP_CAMERA_BUTTON = "showFlipCameraButton";
     private static final String RESULTDISPLAY_DURATION = "resultDisplayDuration";
     private static final String SHOW_TORCH_BUTTON = "showTorchButton";
@@ -138,14 +139,16 @@ public class BarcodeScanner extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
 
-
+                Log.d(LOG_TAG, "Zoom level: " + Intents.Scan.ZOOM);
                 // Configure le zoom de la caméra
-                float zoomLevel = 10.0f; // Zoom x10
+                float zoomLevel = Intents.Scan.ZOOM; //10.0f; // Zoom x10
                 Camera camera = Camera.open();
                 Camera.Parameters parameters = camera.getParameters();
                 if (parameters.isZoomSupported()) {
                     int maxZoom = parameters.getMaxZoom();
                     int zoomValue = (int) (maxZoom / zoomLevel);
+                    Log.d(LOG_TAG, "Zoom maxZoom: " + maxZoom);
+                    Log.d(LOG_TAG, "Zoom zoomValue: " + zoomValue);
                     parameters.setZoom(zoomValue);
                     camera.setParameters(parameters);
                 }
