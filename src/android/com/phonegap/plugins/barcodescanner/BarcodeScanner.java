@@ -156,8 +156,8 @@ public class BarcodeScanner extends CordovaPlugin {
                     camera.setParameters(parameters);
                 }
 
-                parameters.setPreviewSize(50, 50); // Remplacez width et height par les dimensions souhaitées
-                camera.setParameters(parameters);
+                // parameters.setPreviewSize(50, 50); // Remplacez width et height par les dimensions souhaitées
+                // camera.setParameters(parameters);
 
                 camera.release();
 
