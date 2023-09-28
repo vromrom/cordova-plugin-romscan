@@ -117,7 +117,6 @@ public class BarcodeScanner extends CordovaPlugin {
                 return true;
             }
         } else if (action.equals(SCAN)) {
-            float zoomLevel = (float) args.optDouble(0, 1.0); // Default zoom level is 1.0
             //android permission auto add
             if(!hasPermisssion()) {
               requestPermissions(0);
@@ -142,7 +141,7 @@ public class BarcodeScanner extends CordovaPlugin {
 
                 
                 // Configure le zoom de la caméra
-                // float zoomLevel = (float) args.optDouble(0, 1.0); // Default zoom level is 1.0
+                float zoomLevel = (float) args.optDouble(0, 1.0); // Default zoom level is 1.0
                 Log.d(LOG_TAG, "Zoom level: " + zoomLevel);
                 Camera camera = Camera.open();
                 Camera.Parameters parameters = camera.getParameters();
