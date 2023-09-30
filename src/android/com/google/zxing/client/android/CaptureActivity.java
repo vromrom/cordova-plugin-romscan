@@ -450,6 +450,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       historyManager.addHistoryItem(rawResult, resultHandler);
       // Then not from history, so beep/vibrate and we have an image to draw on
       beepManager.playBeepSoundAndVibrate();
+      beepManager.playBeepSoundAndVibrate();
+      beepManager.playBeepSoundAndVibrate();
       drawResultPoints(barcode, scaleFactor, rawResult);
     }
 
