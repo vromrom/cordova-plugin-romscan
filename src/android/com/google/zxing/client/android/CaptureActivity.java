@@ -452,6 +452,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       beepManager.playBeepSoundAndVibrate();
       beepManager.playBeepSoundAndVibrate();
       beepManager.playBeepSoundAndVibrate();
+      Log.w(TAG, "BeepBeep");
       drawResultPoints(barcode, scaleFactor, rawResult);
     }
 
