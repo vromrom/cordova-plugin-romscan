@@ -94,8 +94,8 @@ public class BarcodeScanner extends CordovaPlugin {
      * @sa https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
      */
 
-    erreur to remove
-    
+    erreurBBBB to remove
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
         this.callbackContext = callbackContext;

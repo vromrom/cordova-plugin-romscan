@@ -448,7 +448,9 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     inactivityTimer.onActivity();
     lastResult = rawResult;
     ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
-erreur to remove
+
+erreurrrr to remove
+
     boolean fromLiveScan = barcode != null;
     if (fromLiveScan) {
       historyManager.addHistoryItem(rawResult, resultHandler);
