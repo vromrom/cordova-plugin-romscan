@@ -303,6 +303,10 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       handler.quitSynchronously();
       handler = null;
     }
+
+      //rom
+      beepManager.playBeepSoundAndVibrate();
+
     inactivityTimer.onPause();
     ambientLightManager.stop();
     beepManager.close();
@@ -444,7 +448,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     inactivityTimer.onActivity();
     lastResult = rawResult;
     ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
-
+erreur to remove
     boolean fromLiveScan = barcode != null;
     if (fromLiveScan) {
       historyManager.addHistoryItem(rawResult, resultHandler);
@@ -523,6 +527,12 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                       scaleFactor * a.getY(), 
                       scaleFactor * b.getX(), 
                       scaleFactor * b.getY(), 
+                      paint);
+      //rom
+      canvas.drawLine(scaleFactor * b.getX() / 2, 
+                      0, 
+                      scaleFactor * b.getX() /2 , 
+                      100, 
                       paint);
     }
   }
