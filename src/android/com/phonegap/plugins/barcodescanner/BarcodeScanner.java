@@ -28,7 +28,7 @@ import org.apache.cordova.PermissionHelper;
 // import com.google.zxing.client.android.CaptureActivity;
 // import com.google.zxing.client.android.encode.EncodeActivity;
 // import com.google.zxing.client.android.Intents;
-import com.google.zxing.client.android.CaptureActivity;
+import src.android.com.google.zxing.client.android.CaptureActivity;
 import com.google.zxing.client.android.encode.EncodeActivity;
 import com.google.zxing.client.android.Intents;
 
@@ -94,7 +94,7 @@ public class BarcodeScanner extends CordovaPlugin {
      * @sa https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
      */
 
-    erreurBBBB to remove
+    // erreurBBBB to remove
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
